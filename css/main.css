@@ -6,6 +6,10 @@ html {
     cursor: none;
 }
 
+.hello {
+    font-size: 35px;
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -55,14 +59,23 @@ html {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: rgba(255, 0, 175, 1); 
+    background: rgba(255, 0, 175, 0.8   ); 
+    backdrop-filter: blur(8px) saturate(180%); /* blur */
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: opacity 0.1s;
+    min-width: 30px;
+    min-height: 30px;
+    border: 1px solid rgb(255, 255, 255); /* shape */
+    box-shadow: 0 0 12px rgb(255, 0, 175); /* glow */
+    transition: 
+        opacity 300ms ease,
+        transform 300ms ease,
+        width 250ms ease,
+        height 500ms ease,
+        backdrop-filter 500ms ease; 
 }
-
 
 .fade {
     color: white;

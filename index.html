@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <div class="welcomeOnMotd">
-                <h1>Welcome to the</h1>
+                <span class="hello">Welcome to the</span>
             </div>
             <div class="motd">
                 <span class="title"><b>Omega Labs</b></span>
@@ -21,29 +21,12 @@
                 <h2>We are students from 🇨🇳 aiming to establish a <b class="fade">non-profit, community-driven organization dedicated to creating an open-source Linux ecosystem</b> that enhances the user experience.</h2>
             </div>
             <div class="links">
-                <span>[<a href="https://github.com/the-OmegaLabs" class="link"><span>GitHub</span></a>]</span>
+                <span>[ <a href="https://github.com/the-OmegaLabs" class="link"><span>GitHub</span></a> ] [ <a href="/" class="link"><span>Website</span></a> ]</span>
             </div>
         </div>
         
-        <div id="roundcursor"></div>
-        <script>
-            const customCursor = document.getElementById('roundcursor');
-            const links = document.querySelectorAll('.link'); 
-
-            document.addEventListener('mousemove', (e) => {
-                customCursor.style.left = `${e.clientX}px`;
-                customCursor.style.top = `${e.clientY}px`;
-            });
-
-            links.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    customCursor.style.opacity = '0.1'; 
-                });
-
-                link.addEventListener('mouseleave', () => {
-                    customCursor.style.opacity = '1'; 
-                });
-            });
-        </script>
+        <div id="roundcursor">
+            <script src="/js/Cursor.js"></script>
+        </div>
     </body>
 </html>
