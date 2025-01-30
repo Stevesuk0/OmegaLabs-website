@@ -1,0 +1,87 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Code New Roman', monospace;
+}
+
+.title {
+    font-family: 'Inter';
+    font-size: 70px;
+}
+
+.subtitle {
+    font-family: 'Inter';
+    font-size: 47px;
+    color: white; 
+}
+
+.desc {
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcomeOnMotd {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.motd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.links {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none; /* fuck the <a> */
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.link:hover {
+    background: linear-gradient(to right, rgb(255, 0, 175), rgb(185, 0, 255));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; /* fuck the safari. */
+}
+
+
+.fade {
+    color: white;
+    background-image: linear-gradient(to right, rgb(255, 0, 175), rgb(185, 0, 255));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fadeInGradient 1s ease 1s forwards;
+}
+
+@keyframes fadeInGradient {
+    0% {
+        color: white;
+        background-size: 0% 100%; 
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.5); 
+    }
+    100% {
+        color: transparent;
+        background-size: 100% 100%; 
+    }
+}
+
