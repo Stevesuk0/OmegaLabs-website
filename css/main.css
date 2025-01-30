@@ -55,7 +55,7 @@ html {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: rgba(255, 0, 175, 0.85); 
+    background-color: rgba(255, 0, 175, 1); 
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -63,9 +63,6 @@ html {
     transition: opacity 0.1s;
 }
 
-.link:hover + #roundcursor {
-    opacity: 0;
-}
 
 .fade {
     color: white;
