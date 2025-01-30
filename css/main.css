@@ -2,6 +2,8 @@ html {
     background-color: black;
     color: white;
     font-family: 'Code New Roman', monospace;
+    text-align: center;
+    cursor: none;
 }
 
 .title {
@@ -16,7 +18,6 @@ html {
 }
 
 .desc {
-    text-align: center;
     font-size: 15px;
     position: absolute;
     top: 65%;
@@ -51,6 +52,7 @@ html {
     font-size: 20px;
     text-decoration: none; /* fuck the <a> */
     transition: background 0.5s ease, color 0.5s ease;
+    cursor: none;
 }
 
 .link:hover {
@@ -58,8 +60,24 @@ html {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text; /* fuck the safari. */
+    cursor: none;
 }
 
+#roundcursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 0, 175, 0.85); 
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: opacity 0.1s;
+}
+
+.link:hover + #roundcursor {
+    opacity: 0;
+}
 
 .fade {
     color: white;

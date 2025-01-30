@@ -22,5 +22,26 @@
         <div class="links">
             <span>[ <a href="https://github.com/the-OmegaLabs" class="link"><span>GitHub</span></a> ]</span>
         </div>
+        
+        <div id="roundcursor"></div>
+        <script>
+            const customCursor = document.getElementById('roundcursor');
+            const links = document.querySelectorAll('.link'); 
+
+            document.addEventListener('mousemove', (e) => {
+                customCursor.style.left = `${e.clientX}px`;
+                customCursor.style.top = `${e.clientY}px`;
+            });
+
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    customCursor.style.opacity = '0'; 
+                });
+
+                link.addEventListener('mouseleave', () => {
+                    customCursor.style.opacity = '1'; 
+                });
+            });
+        </script>
     </body>
 </html>
