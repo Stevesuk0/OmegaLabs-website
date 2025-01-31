@@ -69,12 +69,13 @@ html {
     min-height: 30px;
     border: 1px solid rgb(255, 255, 255); /* shape */
     box-shadow: 0 0 12px rgb(255, 0, 175); /* glow */
-    transition: 
+    transition:
         opacity 300ms ease,
         transform 300ms ease,
         width 250ms ease,
         height 500ms ease,
-        backdrop-filter 500ms ease; 
+        backdrop-filter 500ms ease,
+        background-color 250ms ease; 
 }
 
 .fade {
