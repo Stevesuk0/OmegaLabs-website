@@ -74,6 +74,8 @@ html {
         transform 300ms ease,
         width 250ms ease,
         height 500ms ease,
+        left 50ms ease,
+        top 50ms ease,    
         backdrop-filter 500ms ease,
         background-color 200ms ease; 
 }
