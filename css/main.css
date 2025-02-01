@@ -60,22 +60,23 @@ html {
     position: absolute;
     width: 30px;
     height: 30px;
-    background: rgba(255, 0, 175, 0.8   ); 
-    backdrop-filter: blur(8px) saturate(180%); /* blur */
+    background: rgb(255, 0, 175); 
+    backdrop-filter: blur(16px) saturate(360%); /* blur */
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
     min-width: 30px;
     min-height: 30px;
-    border: 1px solid rgb(255, 255, 255); /* shape */
-    box-shadow: 0 0 12px rgb(255, 0, 175); /* glow */
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255); /* glow */
     transition:
         opacity 300ms ease,
         transform 300ms ease,
         width 250ms ease,
         height 500ms ease,
-        left 50ms ease,
-        top 50ms ease,    
+        left 75ms ease,
+        top 75ms ease,    
         backdrop-filter 500ms ease,
         background-color 200ms ease; 
 }
