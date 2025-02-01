@@ -6,7 +6,7 @@ const hideCursor = () => {
 };
 
 const showCursor = () => {
-    customCursor.style.opacity = '1';
+    customCursor.style.opacity = '0.9';
 };
 
 let requestId;
@@ -43,7 +43,7 @@ document.addEventListener('mousemove', (e) => {
             customCursor.style.width = '35px';
             customCursor.style.height = '35px';
             customCursor.style.borderRadius = '50%';
-            customCursor.style.opacity = '0.8';
+            customCursor.style.opacity = '0.9';
         }
     });
 });
