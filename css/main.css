@@ -1,7 +1,7 @@
 html {
-    background-color: #181A1B;
+    font-family: 'Inter';
+    background-color: #2B2B2B;
     color: white;
-    font-family: 'Code New Roman', monospace;
     text-align: center;
     cursor: none;
 }
@@ -11,13 +11,42 @@ html {
 }
 
 .container {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
+    cursor: none;
 }
 
+.icon-bar {
+    cursor: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #2B2B2B;
+    padding: 15px 0;
+    gap: 20px;
+    position: absolute;
+    top: 65%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 999; 
+  }
+  
+  
+.icon-bar a img {
+    cursor: none;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+    border-radius: 50px;
+}
+  
+.icon-bar a img:hover {
+    cursor: none;
+    transform: scale(1.1);
+}
 .title {
     font-family: 'Inter';
     font-size: 70px;
@@ -35,36 +64,14 @@ html {
 }
 
 .links {
+    font-family: 'Code New Roman', monospace;
     position: relative;
     font-size: 20px;
 }
 
-.languageSwitch {
-    top: 1%;
-    right: 1%;
-    position: absolute;
-    font-size: 20px;
-}
-
-.link {
-    color: white;
-    font-size: 20px;
-    text-decoration: none; /* fuck the <a> */
-    transition: background 0.5s ease, color 0.5s ease;
-    cursor: none;
-}
-
-.link:hover {
-    background: linear-gradient(to right, rgb(255, 0, 175), rgb(185, 0, 255));
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text; /* fuck the safari. */
-    cursor: none;
-}
-
 .fade {
     color: white;
-    background-image: linear-gradient(to right, rgb(255, 0, 175), rgb(185, 0, 255));
+    background: linear-gradient(to right, rgb(102, 205, 170), rgb(30, 144, 255));
     background-size: 0% 100%;
     background-repeat: no-repeat;
     background-clip: text;
@@ -77,10 +84,8 @@ html {
         color: white;
         background-size: 0% 100%; 
     }
-    50% {
-        color: rgba(255, 255, 255, 0.5); 
-    }
     100% {
+        color: rgba(255, 255, 255, 0.5); 
         color: transparent;
         background-size: 100% 100%; 
     }

@@ -1,1 +1,75 @@
-const c=document.createElement('div');c.id='o';document.body.append(c);const s=document.createElement('style');s.textContent='#o{pointer-events:none;position:absolute;width:30px;height:30px;background:#ff00af;backdrop-filter:blur(8px)saturate(180%);border-radius:50%;transform:translate(-50%,-50%);z-index:9999;border:2px solid #fff;transition:opacity .3s ease,transform .3s ease,width .25s,height .5s,left .075s,top .075s,backdrop-filter .5s,background-color .2s}';document.head.append(s);let t,r;document.addEventListener('mousemove',e=>{cancelAnimationFrame(r);r=requestAnimationFrame(()=>{c.style.opacity='.9';clearTimeout(t);t=setTimeout(()=>c.style.opacity='.2',1e3);c.style.transform='translate(-50%,-50%)scale(1)';[c.style.left,c.style.top]=[e.clientX+'px',e.clientY+'px'];const o=document.elementFromPoint(e.x,e.y),d=o?.closest('a')?.getBoundingClientRect();d?Object.assign(c.style,{zIndex:-9999,background:'#b900ff',width:d.width+15+'px',height:d.height+5+'px',left:(d.left+d.right)/2+'px',top:(d.top+d.bottom)/2+'px',borderRadius:'5px',opacity:'.3'}):Object.assign(c.style,{zIndex:9999,background:'#ff00af',width:'35px',height:'35px',borderRadius:'50%',opacity:'.9'})})});document.documentElement.style.cursor='none';
+const c = document.createElement('div');
+c.id = 'o';
+document.body.append(c);
+
+const s = document.createElement('style');
+s.textContent = `
+  #o {
+    pointer-events: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #66cdaa;
+    backdrop-filter: blur(8px) saturate(180%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999999;
+    border: 2px solid #fff;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      width 0.25s,
+      height 0.5s,
+      left 0.05s,
+      top 0.05s,
+      backdrop-filter 0.5s,
+      background-color 0.2s;
+  }
+`;
+document.head.append(s);
+
+let timeout, animationFrame;
+
+document.addEventListener('mousemove', e => {
+  cancelAnimationFrame(animationFrame);
+
+  animationFrame = requestAnimationFrame(() => {
+    c.style.opacity = '0.9';
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      c.style.opacity = '0.2';
+    }, 1000);
+
+    c.style.transform = 'translate(-50%, -50%) scale(1)';
+    c.style.left = e.clientX + 'px';
+    c.style.top = e.clientY + 'px';
+
+    const hoveredElement = document.elementFromPoint(e.x, e.y);
+    const linkRect = hoveredElement?.closest('a')?.getBoundingClientRect();
+
+    if (linkRect) {
+      Object.assign(c.style, {
+        zIndex: -9999,
+        background: rgb(102, 205, 170),
+        width: linkRect.width + 15 + 'px',
+        height: linkRect.height + 5 + 'px',
+        left: (linkRect.left + linkRect.right) / 2 + 'px',
+        top: (linkRect.top + linkRect.bottom) / 2 + 'px',
+        borderRadius: '5px',
+        opacity: '0.3'
+      });
+    } else {
+      Object.assign(c.style, {
+        zIndex: 9999,
+        background: rgb(102, 205, 170),
+        width: '35px',
+        height: '35px',
+        borderRadius: '50%',
+        opacity: '0.9'
+      });
+    }
+  });
+});
+
+document.documentElement.style.cursor = 'none';
