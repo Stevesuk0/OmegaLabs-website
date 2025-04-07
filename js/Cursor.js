@@ -38,7 +38,7 @@ document.addEventListener('mousemove', e => {
 
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      c.style.opacity = '0.2';
+      c.style.opacity = '0';
     }, 1000);
 
     c.style.transform = 'translate(-50%, -50%) scale(1)';
