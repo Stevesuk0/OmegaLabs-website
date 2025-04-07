@@ -62,7 +62,7 @@ document.addEventListener('mousemove', e => {
     } else {
       Object.assign(c.style, {
         zIndex: 9999,
-        background: rgb(102, 205, 170),
+        background: rgb(52, 205, 120),
         width: '35px',
         height: '35px',
         borderRadius: '50%',

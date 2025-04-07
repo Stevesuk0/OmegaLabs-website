@@ -86,6 +86,16 @@ html {
     animation: fadeInGradient 1s ease 1s forwards;
 }
 
+.fadeTitle {
+    color: white;
+    background: linear-gradient(to right, rgb(255, 0, 175), rgb(143, 1, 251));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fadeInGradient 1s ease 1s forwards;
+}
+
 @keyframes fadeInGradient {
     0% {
         color: white;
