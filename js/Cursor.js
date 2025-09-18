@@ -36,14 +36,14 @@ document.addEventListener('mousemove', e => {
     const linkRect = hoveredElement?.closest('a')?.getBoundingClientRect();
 
     if (linkRect) {
-      c.style.zIndex = '-9999';
       c.style.backgroundColor = 'rgb(143, 1, 251)';
-      c.style.width = linkRect.width + 15 + 'px';
-      c.style.height = linkRect.height + 5 + 'px';
+      c.style.width = linkRect.width + 3 + 'px';
+      c.style.height = linkRect.height + 3 + 'px';
       c.style.left = (linkRect.left + linkRect.right) / 2 + 'px';
       c.style.top = (linkRect.top + linkRect.bottom) / 2 + 'px';
       c.style.borderRadius = '5px';
       c.style.opacity = '0.3';
+      c.style.zIndex = '-9999';
     } else {
       c.style.zIndex = '9999';
       c.style.backgroundColor = 'rgb(255, 0, 175)';

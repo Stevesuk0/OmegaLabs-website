@@ -34,7 +34,7 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 左右分开 */
+    justify-content: space-between;
     gap: 40px;
 }
 
@@ -59,9 +59,6 @@ header nav a {
     color: var(--muted);
     text-decoration: none;
     transition: color 0.4s ease; 
-}
-
-header nav a:hover {
     color: #6845e6;
 }
 
@@ -85,11 +82,11 @@ header nav a.other::after {
 }
 
 header nav a.other:hover {
-    color: transparent; /* 隐藏原文字 */
+    color: transparent; 
 }
 
 header nav a.other:hover::after {
-    opacity: 1; /* 显示渐变文字 */
+    opacity: 1; 
 }
 
 header .brand {
@@ -141,12 +138,48 @@ a {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    position: relative; 
+    overflow: hidden;   
     transition: background 0.2s;
+    box-shadow: 
+        0 0 48px rgba(104, 69, 230, 1),   
+        0 0 16px rgba(104, 69, 230, 0.9),
+        0 0 4px rgba(255, 255, 255, 0.6); 
 }
 
 .btn:hover {
     background: #6845e6;
 }
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.4) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: skewX(-20deg);
+}
+
+.btn:hover::after {
+    animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+    from {
+        left: -75%;
+    }
+    to {
+        left: 125%;
+    }
+}
+
 
 footer {
     position: fixed;
@@ -204,6 +237,12 @@ footer {
         color: transparent;
         background-size: 100% 100%; 
     }
+}
+
+.fadeUp0 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
 .fadeUp1 {

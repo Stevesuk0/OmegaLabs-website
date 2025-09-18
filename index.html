@@ -29,6 +29,7 @@
 
     <main style="height:100vh; display:flex; justify-content:center; align-items:center;">
         <section id="topics" style="text-align:center; padding:120px 20px;">
+            <b class="fadeUp0" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">Introducing</b>
             <h1 class="fadeUp1" style="font-size:56px; font-weight:700; margin-bottom:24px; background: linear-gradient(to right, rgb(255, 0, 175) 0%, rgb(143, 1, 251) 65%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
                 Omega Linux
             </h1>
@@ -42,6 +43,10 @@
             </p>
             <a href="" class="btn fadeIn" style="font-size:18px; padding:14px 32px;">Learn more</a>
             <script>
+                function randRange(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
                 function typer() {
                     const words = ["creativity", "imagination", "future", "performance", "security"];
                     const el = document.querySelector(".typewriter b");
@@ -54,17 +59,17 @@
                         if (!deleting && charIndex <= word.length) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex++;
-                            setTimeout(type, 100);
+                            setTimeout(type, randRange(100, 300));
                         } else if (deleting && charIndex >= 0) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex--;
-                            setTimeout(type, 100);
+                            setTimeout(type, randRange(25, 75));
                         } else {
                             deleting = !deleting;
                             if (!deleting) {
                                 wordIndex = (wordIndex + 1) % words.length;
                             }
-                            setTimeout(type, 700);
+                            setTimeout(type, 1000);
                         }
                     }
 

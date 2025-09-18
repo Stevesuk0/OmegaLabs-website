@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Code New Roman';
     src: url('CodeNewRoman.woff2') format('woff2'),
-         url('CodeNewRoman.woff2') format('woff'); /* 兼容性考虑 */
+         url('CodeNewRoman.woff2') format('woff'); 
     font-weight: normal;
     font-style: normal;
 }
