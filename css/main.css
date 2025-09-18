@@ -106,6 +106,10 @@ p {
     margin-bottom: 20px;
 }
 
+a {
+    cursor: none;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -144,24 +148,30 @@ footer {
     background-repeat: no-repeat;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: fadeInGradient 1s ease 0.5s forwards;
+    animation: fadeInGradient 1s ease 1.6s forwards;
 }
 
-.fadeTitle::after {
+.underliner {
+    position: relative;
+    display: inline-block;
+}
+
+.underliner::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px; 
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(to right, rgb(102, 205, 170), rgb(30, 144, 255));
-    transition: width 0.5s ease;
-}
-
-.fadeTitle:hover::after {
+    bottom: -2px; 
     width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(255, 0, 175), rgb(143, 1, 251));
+    transform: scaleY(0); 
+    transform-origin: bottom; 
+    transition: transform 0.3s ease;
 }
 
+.underliner:hover::after {
+    transform: scaleY(1); 
+}
 @keyframes fadeInGradient {
     0% {
         color: white;
@@ -171,4 +181,36 @@ footer {
         color: transparent;
         background-size: 100% 100%; 
     }
+}
+
+.fadeUp1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fadeUp2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
