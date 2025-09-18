@@ -54,11 +54,11 @@
                         if (!deleting && charIndex <= word.length) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex++;
-                            setTimeout(type, 300);
+                            setTimeout(type, 100);
                         } else if (deleting && charIndex >= 0) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex--;
-                            setTimeout(type, 300);
+                            setTimeout(type, 100);
                         } else {
                             deleting = !deleting;
                             if (!deleting) {
@@ -71,7 +71,7 @@
                     type();
                 }
 
-                setTimeout(typer, 500);
+                setTimeout(typer, 1000);
             </script>
         </section>
     </main>
