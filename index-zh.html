@@ -29,17 +29,15 @@
 
     <main style="height:100vh; display:flex; justify-content:center; align-items:center;">
         <section id="topics" style="text-align:center; padding:120px 20px;">
-            <b class="fadeUp0" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">Introducing</b>
+            <b class="fadeUp0" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">向您呈现</b>
+            <br>
             <h1 class="fadeUp1" style="font-size:56px; font-weight:700; margin-bottom:24px; background: linear-gradient(to right, rgb(255, 0, 175) 0%, rgb(143, 1, 251) 65%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
                 Omega Linux
             </h1>
             <p class="fadeUp2" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">
-                <b class="underliner">Lightweight</b>,
-                <b class="underliner">Modular</b>,
-                <b class="underliner">Secure</b>.
+                <b class="underliner">轻量</b>、<b class="underliner">模块化</b>、<b class="underliner">安全</b>。
                 <br>
-                Never before so focused on your
-                <span class="fadeTitle typewriter"><b></b></span>.
+                前所未有的让你只专注于<span class="fadeTitle typewriter"><b></b></span>。
             </p>
             <a href="" class="btn fadeIn" style="font-size:18px; padding:14px 32px;">Learn more</a>
             <script>
@@ -48,7 +46,7 @@
                 }
 
                 function typer() {
-                    const words = ["creativity", "imagination", "future", "performance", "security"];
+                    const words = ["创造", "灵感", "未来", "顺畅", "安心"];
                     const el = document.querySelector(".typewriter b");
                     let wordIndex = 0;
                     let charIndex = 0;
@@ -59,11 +57,11 @@
                         if (!deleting && charIndex <= word.length) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex++;
-                            setTimeout(type, randRange(100, 300));
+                            setTimeout(type, randRange(150, 300));
                         } else if (deleting && charIndex >= 0) {
                             el.textContent = word.substring(0, charIndex);
                             charIndex--;
-                            setTimeout(type, randRange(25, 75));
+                            setTimeout(type, randRange(75, 125));
                         } else {
                             deleting = !deleting;
                             if (!deleting) {
