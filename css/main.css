@@ -34,8 +34,24 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    gap: 40px; 
+    justify-content: space-between; /* 左右分开 */
+    gap: 40px;
 }
+
+header .highlight {
+    position: absolute;
+    left: 20px;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+header nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 
 header nav a {
     position: relative;
@@ -45,7 +61,15 @@ header nav a {
     transition: color 0.4s ease; 
 }
 
-header nav a::after {
+header nav a:hover {
+    color: #6845e6;
+}
+
+header nav a.other {
+    color: var(--muted);
+}
+
+header nav a.other::after {
     content: attr(data-text); 
     position: absolute;
     left: 0;
@@ -60,14 +84,13 @@ header nav a::after {
     transition: opacity 0.6s ease; 
 }
 
-header nav a:hover {
-    color: transparent;
+header nav a.other:hover {
+    color: transparent; /* 隐藏原文字 */
 }
 
-header nav a:hover::after {
-    opacity: 1;
+header nav a.other:hover::after {
+    opacity: 1; /* 显示渐变文字 */
 }
-
 
 header .brand {
     display: flex;
