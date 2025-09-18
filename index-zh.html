@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Omega Labs - 官方网站</title>
+
+    <link rel="stylesheet" href="font/Inter/inter.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="stars-field"></div>
+    <div class="gradient-orb orb-indigo"></div>
+    <div class="gradient-orb orb-emerald"></div>
+    <header>
+        <span class="highlight">主打</span>
+        <nav>
+            <a href="" data-text="Topics">话题</a>
+            <a href="" data-text="Omega Linux" class="other">Omega Linux</a>
+            <div class="brand"><img src="img/brand-icon.png" /></div>
+            <a href="https://github.com/the-OmegaLabs" data-text="GitHub" class="other">GitHub</a>
+            <a href="" data-text="About" class="other">关于</a>
+        </nav>
+    </header>
+
+    <main style="height:100vh; display:flex; justify-content:center; align-items:center;">
+        <section id="topics" style="text-align:center; padding:120px 20px;">
+            <b class="fadeUp0" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">Introducing</b>
+            <h1 class="fadeUp1" style="font-size:56px; font-weight:700; margin-bottom:24px; background: linear-gradient(to right, rgb(255, 0, 175) 0%, rgb(143, 1, 251) 65%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                Omega Linux
+            </h1>
+            <p class="fadeUp2" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">
+                <b class="underliner">Lightweight</b>,
+                <b class="underliner">Modular</b>,
+                <b class="underliner">Secure</b>.
+                <br>
+                Never before so focused on your
+                <span class="fadeTitle typewriter"><b></b></span>.
+            </p>
+            <a href="" class="btn fadeIn" style="font-size:18px; padding:14px 32px;">Learn more</a>
+            <script>
+                function randRange(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
+                function typer() {
+                    const words = ["creativity", "imagination", "future", "performance", "security"];
+                    const el = document.querySelector(".typewriter b");
+                    let wordIndex = 0;
+                    let charIndex = 0;
+                    let deleting = false;
+
+                    function type() {
+                        const word = words[wordIndex];
+                        if (!deleting && charIndex <= word.length) {
+                            el.textContent = word.substring(0, charIndex);
+                            charIndex++;
+                            setTimeout(type, randRange(100, 300));
+                        } else if (deleting && charIndex >= 0) {
+                            el.textContent = word.substring(0, charIndex);
+                            charIndex--;
+                            setTimeout(type, randRange(25, 75));
+                        } else {
+                            deleting = !deleting;
+                            if (!deleting) {
+                                wordIndex = (wordIndex + 1) % words.length;
+                            }
+                            setTimeout(type, 1000);
+                        }
+                    }
+
+                    type();
+                }
+
+                setTimeout(typer, 1000);
+            </script>
+        </section>
+    </main>
+
+
+    <footer>
+        © 2025 Omega Labs
+    </footer>
+</body>
+<script src="/js/Cursor.js"></script>
+</html>
