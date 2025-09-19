@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Omega Labs - Official Website</title>
+
+    <link rel="stylesheet" href="/font/Inter/inter.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/omegaos/css/style.css">   
+</head>
+
+<body>
+    <div class="stars-field"></div>
+    <div class="gradient-orb orb-indigo"></div>
+    <div class="gradient-orb orb-emerald"></div>
+    <header>
+        <span class="highlight">Headline</span>
+        <nav>
+            <a href="/" data-text="Topics" class="other">Topics</a>
+            <a href="/omegaos/" data-text="Omega Linux">Omega Linux</a>
+            <div class="brand"><img src="/img/brand-icon.png" /></div>
+            <a href="https://github.com/the-OmegaLabs" data-text="GitHub" class="other">GitHub</a>
+            <a href="" data-text="About" class="other">About</a>
+        </nav>
+    </header>
+
+    <main style="height:100vh; display:flex; justify-content:center; align-items:center;">
+        <section id="topics" style="text-align:center; padding:120px 20px;">
+            <b class="fadeUp0" style="max-width:720px; margin:0 auto 40px auto; font-size:20px; line-height:1.8; color:var(--muted);">Introducing</b>
+            <h1 class="fadeUp1" style="font-size:56px; font-weight:700; margin-bottom:24px; background: linear-gradient(to right, rgb(255, 0, 175) 0%, rgb(143, 1, 251) 65%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                Omega Linux
+            </h1>
+        </section>
+        
+        <div class="scroll-down" onclick="scrollDown()" style="cursor: none;">↓</div>
+    </main>
+
+    
+    <section id="omegaos" style="height:100vh; display:flex; justify-content:center; align-items:center; padding:0 80px; gap:24px;">
+        
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; padding-left:50px;">
+            <h2 style="
+                font-size: 60px; 
+                margin:0; 
+                background: linear-gradient(90deg, rgb(255, 0, 175), rgb(143, 1, 251));
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            ">
+            The experience,<br>Reinvented.
+            </h2>
+            <p style="color:var(--muted); font-size:18px; max-width:400px;">
+            Omega Linux, rebuilt from Debian Linux.<br>Lightweight. Modular. Auditable. <br>Focus on what matters most.
+            </p>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <h3 style="margin-top: 20px;">Neat.</h3>
+                <p>Every system tools are completely lightweight, Light as air.</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-top: 20px;">Modular.</h3>
+                <p>Combine features your way. Choose only what you need.</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-top: 20px;">Auditable.</h3>
+                <p>Safe, transparent, and fully traceable.</p>
+            </div>
+            <div class="card">
+            <h3 style="margin-top: 20px;">Simpler.</h3>
+            <p>Everything you need, just simpler.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="contribute" style="padding:100px 20px; text-align:center;">
+        <h2 style="font-size:32px; margin-bottom:24px;">参与贡献</h2>
+        <p style="max-width:700px; margin:0 auto 40px auto; color:var(--muted); font-size:18px; line-height:1.8;">
+        无论是代码、文档、测试，还是创意点子，我们都欢迎你的加入。前往 GitHub 提交 PR，或在 Discussions 中分享你的想法，一起推动 OmegaOS 的成长。
+        </p>
+        <a href="https://github.com" class="btn" style="font-size:18px; padding:14px 32px;">加入我们</a>
+    </section> -->
+
+
+    <footer>
+        © 2025 Omega Labs
+    </footer>
+
+    <script>
+        function scrollDown() {
+            const next = document.querySelector('#omegaos');
+            next.scrollIntoView({ behavior: 'smooth' });
+        }
+
+    </script>
+</body>
+</html>
