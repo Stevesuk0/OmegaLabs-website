@@ -23,7 +23,7 @@
         zIndex: "99999",
         whiteSpace: "pre-line",
       });
-      overlay.innerText = "No mobile responsive.\nI have a life.";
+      overlay.innerText = "Go to desktop.\nNo mobile version here.\nI have a life.";
       document.body.appendChild(overlay);
     }
   }
@@ -41,8 +41,6 @@
     }
   }
 
-  // 初始检测
   checkSize();
-  // 窗口实时变化检测
   window.addEventListener("resize", checkSize);
 })();
