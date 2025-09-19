@@ -23,7 +23,7 @@
         zIndex: "99999",
         whiteSpace: "pre-line",
       });
-      overlay.innerText = "No mobile responsive.\nI’m have a life.";
+      overlay.innerText = "No mobile responsive.\nI have a life.";
       document.body.appendChild(overlay);
     }
   }
