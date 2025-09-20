@@ -76,6 +76,30 @@
             <p style="margin-top: 10px;">任何你需要的东西，都变得更<b>简单</b>了。</p>
             </div>
         </div>
+        <script>
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const { offsetX, offsetY, target } = e;
+                    const { clientWidth, clientHeight } = target;
+
+                    const x = (offsetX / clientWidth) - 0.5; 
+                    const y = (offsetY / clientHeight) - 0.5; 
+
+                    const depth = 30; 
+
+                    const rotateX = -y * depth;
+                    const rotateY = x * depth; 
+
+                    card.style.transform = `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${depth}px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)';
+                });
+            });
+        </script>
     </section>
 
 
